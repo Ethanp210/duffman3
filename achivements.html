@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Iceman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="IMG_1486.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="IMG_1486.png"> 
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .topnav a.active {
+      background-color: red;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="games.html">Games</a>
+    <a href="proxy.html">Proxys</a>
+    <a href="other.html">Other</a>
+    <a class="active" href="achivements.html">Achivements</a>
+  </div>
+
+  <ul id='list'>
+      <li class="animals"><a style="font-size: 40px; color: blue">Achivements (Yellow = Completed)</a></li>
+      <li class="animals"><a id="vaultAch" style="color: blue;">Beat The Vault</a></li>
+      <li class="animals"><a id="easterEggAch" style="color: blue;">Find the Easter Egg in one of the most empty pages.</a></li>
+      <li class="animals"><a style="color: black"></a></li>
+      <li class="animals"><a style="font-size: 40px; color: blue">Hard Achivements (Screenshots)</a></li>
+  </ul> 
+  <div id="animals"></div> <!-- Close the div properly -->
+
+  <script src="script.js"></script> <!-- Include your external script file -->
+  <script>
+    // JavaScript code to run after DOM is fully loaded
+    window.onload = function() {
+      if (localStorage.getItem("vaultCompleted") === "true") {
+        document.getElementById('vaultAch').style.color = 'yellow';
+      } else {
+        document.getElementById('vaultAch').style.color = 'blue';
+      }
+      if (localStorage.getItem("easterEgg") === "true") {
+        document.getElementById('easterEggAch').style.color = 'yellow';
+      } else {
+        document.getElementById('easterEggAch').style.color = 'blue';
+      }
+    };
+  </script>
+</body>
+</html>

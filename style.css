@@ -107,8 +107,11 @@ body {
   border-color: blue!important;
 }
 body{
-  background-color: black;
-  
+  background-image: url('https://raw.githubusercontent.com/MCRed2024/MCRed2024.github.io/main/IMG_2053.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat-y;
+
 }
 #hiddenList{
   text-decoration: none;
